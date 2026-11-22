@@ -39,6 +39,9 @@
 .project-tags { @apply flex flex-wrap gap-[6px]; margin: 18px 0; }
 .project-tags span { @apply text-[11px]; padding: 5px 8px; border: 1px solid var(--border); @apply rounded-[6px] text-muted; }
 .project-view { @apply w-full; border: 0; font-family: inherit; @apply cursor-pointer bg-primary-dark flex justify-between items-center; }
+.project-view svg {
+  @apply w-[18px] h-[18px] shrink-0;
+}
 .projects :is(button, article):focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; }
 .project-dialog { @apply m-auto; width: min(520px, calc(100% - 40px)); max-height: 85vh; padding: 40px 28px; border: 1px solid var(--border); @apply rounded-[22px] bg-surface text-text; }
 .project-dialog::backdrop { background: rgb(0 0 0 / 65%); }
