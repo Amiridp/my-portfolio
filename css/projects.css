@@ -18,7 +18,7 @@
 .project-card:nth-child(1) { --offset: -200px; --angle: -12deg; @apply z-[1]; }
 .project-card:nth-child(2) { --offset: 0px; --angle: 0deg; @apply z-[2]; }
 .project-card:nth-child(3) { --offset: 200px; --angle: 12deg; @apply z-[3]; }
-.project-card:is(:hover, :focus-within, .is-active) {
+.project-card.is-active {
   @apply z-[5];
   transform: translateX(calc(-50% + var(--offset))) translateY(-48px) rotate(0deg);
   @apply border-primary;
@@ -53,7 +53,7 @@
   .projects { padding: 64px 0 20px; }
   .project-deck { @apply h-auto grid gap-[24px] mt-[36px]; padding: 8px 0 24px; }
   .project-card:nth-child(n) { @apply relative top-auto left-auto w-full max-w-[360px] mx-auto; transform: none; }
-  .project-card:is(:hover, :focus-within, .is-active) { transform: translateY(-6px); }
+  .project-card.is-active { transform: translateY(-6px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .project-card, .project-view { transition: none; }
@@ -79,7 +79,7 @@
   }
   .project-card-body { @apply flex flex-col flex-1; }
   .project-view { margin-top: auto; }
-  .project-card:is(:hover, :focus-within, .is-active) { transform: translateY(-6px); }
+  .project-card.is-active { transform: translateY(-6px); }
 }
 @media (max-width: 640px) {
   .project-deck { grid-template-columns: minmax(0, 1fr); }
@@ -87,5 +87,5 @@
   .project-dialog { padding: 48px 20px 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .project-card:is(:hover, :focus-within, .is-active) { transition: none; }
+  .project-card.is-active { transition: none; }
 }
