@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sina Amiri | Portfolio</title>
+    <meta name="description" content="Explore Sina Amiri&#39;s front-end projects and skills in HTML, CSS, JavaScript and Tailwind CSS. Get in touch for internship opportunities and collaboration." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sina Amiri | Front-End Developer" />
+    <meta property="og:description" content="Explore my projects, front-end skills and personal portfolio." />
+    <meta property="og:image" content="/images/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sina Amiri — Front-End Developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sina Amiri | Front-End Developer" />
+    <meta name="twitter:description" content="Projects, skills and contact information." />
+    <meta name="twitter:image" content="/images/social-preview.png" />
+    <meta name="theme-color" content="#f7fafc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1b1e" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="js/projects.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+    <script src="js/reveal.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo">SinaAmiri</a>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="header-socials">
+            <a
+              href="https://github.com/Amiridp"
+              aria-label="GitHub"
+              target="_blank"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/amiridp"
+              aria-label="LinkedIn"
+              target="_blank"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <svg class="theme-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M9.571 1.18a7 7 0 1 1-8.39 8.391a6 6 0 1 0 8.39-8.39" />
+            </svg>
+            <svg class="theme-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-text">
+            <span class="badge"> WELCOME TO MY PORTFOLIO </span>
+
+            <h1>
+              Hi, I'm Sina<br />
+              <span class="role">Front-End Developer</span>
+            </h1>
+
+            <p>
+              I turn ideas into modern, responsive websites through clean code,
+              thoughtful design, and a focus on great user experiences.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="MyResume(SinaAmiri).pdf" class="btn btn-primary" download>
+                Download Resume
+              </a>
+
+              <a href="#contact" class="btn btn-secondary"> Contact Me </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img src="images/site-photo.webp" width="680" height="680" fetchpriority="high" alt="Sina Amiri" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <span class="section-label">ABOUT ME</span>
+
+              <h2>
+                A little about me
+                <br />
+                and what I <span>love to build.</span>
+              </h2>
+
+              <p>
+                I'm a Front-End Developer who enjoys turning ideas into clean,
+                responsive, and engaging web experiences. I love building
+                interfaces that not only look good but also feel intuitive and
+                easy to use.
+              </p>
+
+              <p>
+                I'm constantly learning new technologies, improving my skills,
+                and putting what I learn into practice through real-world
+                projects.
+              </p>
+            </div>
+
+            <div class="about-line"></div>
+
+            <div class="about-items">
+              <div class="about-item">
+                <div class="about-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M14.18 4.276a.75.75 0 0 1 .531.918l-3.973 14.83a.75.75 0 0 1-1.45-.389l3.974-14.83a.75.75 0 0 1 .919-.53m2.262 3.053a.75.75 0 0 1 1.059-.056l1.737 1.564c.737.662 1.347 1.212 1.767 1.71c.44.525.754 1.088.754 1.784c0 .695-.313 1.258-.754 1.782c-.42.499-1.03 1.049-1.767 1.711l-1.737 1.564a.75.75 0 0 1-1.004-1.115l1.697-1.527c.788-.709 1.319-1.19 1.663-1.598c.33-.393.402-.622.402-.818s-.072-.424-.402-.817c-.344-.409-.875-.89-1.663-1.598l-1.697-1.527a.75.75 0 0 1-.056-1.06m-8.94 1.06a.75.75 0 1 0-1.004-1.115L4.761 8.836c-.737.662-1.347 1.212-1.767 1.71c-.44.525-.754 1.088-.754 1.784c0 .695.313 1.258.754 1.782c.42.499 1.03 1.049 1.767 1.711l1.737 1.564a.75.75 0 0 0 1.004-1.115l-1.697-1.527c-.788-.709-1.319-1.19-1.663-1.598c-.33-.393-.402-.622-.402-.818s.072-.424.402-.817c.344-.409.875-.89 1.663-1.598z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>Clean Code</h3>
+                  <p>I write clean, readable, and maintainable code.</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <div class="about-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M16.5 23.25h-6l.75-4.5h4.5zm-8.25 0h10.5m-7.5-18h10.5a1.5 1.5 0 0 1 1.5 1.5v10.5a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-1.5m0 0h19.5"
+                      />
+                      <path
+                        d="M2.25.75h4.5s1.5 0 1.5 1.5v9s0 1.5-1.5 1.5h-4.5s-1.5 0-1.5-1.5v-9s0-1.5 1.5-1.5m-1.5 9h7.5"
+                      />
+                    </g>
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>Responsive Design</h3>
+                  <p>
+                    I build interfaces that work smoothly across every screen
+                    size.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <div class="about-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14.475 8.975a3.5 3.5 0 1 0-4.95-4.95a3.5 3.5 0 0 0 4.95 4.95M20 21c-.507-10.667-15.493-10.667-16 0"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>User Focused</h3>
+                  <p>
+                    I create simple and intuitive experiences with users in
+                    mind.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <div class="about-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path
+                      fill="currentColor"
+                      d="M20 8v2h6.586L18 18.586l-4.293-4.293a1 1 0 0 0-1.414 0L2 24.586L3.414 26L13 16.414l4.293 4.293a1 1 0 0 0 1.414 0L28 11.414V18h2V8Z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>Continuous Learning</h3>
+                  <p>
+                    I'm always learning, experimenting, and improving my skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <span class="section-label">PROJECTS</span>
+          <div class="projects-heading">
+            <h2 id="projects-title">A few things <span>I've built.</span></h2>
+            <p>Pick a card to explore. Hover, tap, or use your keyboard.</p>
+          </div>
+          <div class="project-deck">
+            <article class="project-card" tabindex="0" aria-label="Select Personal Portfolio">
+              <div class="project-card-top"><span>01 / WEB</span><span aria-hidden="true">&#9824;</span></div>
+              <div class="project-art project-art-portfolio"><img src="images/portfolio-preview.webp" alt="Personal portfolio homepage with a teal introduction and portrait" width="1904" height="667" loading="lazy" /></div>
+              <div class="project-card-body">
+                <span class="project-category">DESIGN &amp; DEVELOPMENT</span>
+                <h3>Personal Portfolio</h3>
+                <p>A personal space for my work, skills, and front-end journey.</p>
+                <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <button class="btn btn-primary project-view" type="button" data-project="portfolio" aria-haspopup="dialog">View project <span aria-hidden="true">&#8599;</span></button>
+              </div>
+            </article>
+            <article class="project-card" tabindex="0" aria-label="Select upcoming project two">
+              <div class="project-card-top"><span>02 / NEXT</span><span aria-hidden="true">&#9830;</span></div>
+              <div class="project-art project-art-next" aria-hidden="true"><span>Next idea.</span><i></i><i></i></div>
+              <div class="project-card-body">
+                <span class="project-category">COMING SOON</span>
+                <h3>Something New</h3>
+                <p>A place for my next project. Details will be added here.</p>
+                <div class="project-tags"><span>Coming soon</span></div>
+                <button class="btn btn-primary project-view" type="button" data-project="next" aria-haspopup="dialog">View details <span aria-hidden="true">&#8599;</span></button>
+              </div>
+            </article>
+            <article class="project-card" tabindex="0" aria-label="Select upcoming project three">
+              <div class="project-card-top"><span>03 / EXPLORE</span><span aria-hidden="true">&#9827;</span></div>
+              <div class="project-art project-art-lab" aria-hidden="true"><span>{ create }</span><i></i><i></i></div>
+              <div class="project-card-body">
+                <span class="project-category">COMING SOON</span>
+                <h3>Room to Experiment</h3>
+                <p>More ideas to explore. Check back for future work.</p>
+                <div class="project-tags"><span>Coming soon</span></div>
+                <button class="btn btn-primary project-view" type="button" data-project="lab" aria-haspopup="dialog">View details <span aria-hidden="true">&#8599;</span></button>
+              </div>
+            </article>
+          </div>
+          <dialog class="project-dialog" aria-labelledby="project-dialog-title">
+            <button class="project-close" type="button" aria-label="Close project details" autofocus>&times;</button>
+            <span class="section-label">PROJECT DETAILS</span>
+            <h3 id="project-dialog-title"></h3>
+            <p id="project-dialog-description"></p>
+            <a class="btn btn-primary project-demo" href="#home" hidden>Explore this website <span aria-hidden="true">&#8599;</span></a>
+          </dialog>
+        </div>
+      </section>
+
+      <section class="skills" id="skills" aria-labelledby="skills-title">
+  <div class="container"><div class="skills-content">
+    <div class="skills-heading"><span class="section-label">SKILLS</span>
+      <h2 id="skills-title">My Front-End <span>Journey.</span></h2>
+      <p>Every technology represents a new step in my journey toward becoming a better front-end developer.</p>
+    </div>
+    <div class="skills-orbit">
+      <div class="skills-center"><span>FRONT-END</span></div>
+      <div class="orbit orbit-one"><div class="skill skill-html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="m12 18.178l4.62-1.256l.623-6.778H9.026L8.822 7.89h8.626l.227-2.211H6.325l.636 6.678h7.82l-.261 2.866l-2.52.667l-2.52-.667l-.158-1.844h-2.27l.329 3.544zM3 2h18l-1.623 18L12 22l-7.377-2z"
+                    />
+                  </svg><span class="skill-name">HTML</span></div>
+<div class="skill skill-css"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M3.232 2.24c0 .134.339 4.05.757 8.705c.41 4.647.765 8.59.774 8.759l.027.302l3.605.997L11.99 22l.72-.196l3.588-.988c2.456-.676 2.875-.819 2.91-.97c.045-.214 1.558-17.365 1.558-17.65V2H3.232zm14.304 3.783c-.036.214-.267 2.742-.516 5.634c-.258 2.884-.472 5.27-.49 5.287c-.036.045-4.406 1.255-4.53 1.255c-.09 0-2.475-.65-4.104-1.112l-.454-.134l-.106-1.175a76 76 0 0 0-.16-1.744l-.054-.552h1.113c1.255 0 1.22-.018 1.228.757c0 .195.027.498.053.676l.054.32l1.22.32l1.21.321l1.201-.32c.659-.178 1.21-.33 1.21-.33c.01-.008.063-.534.117-1.166c.053-.64.115-1.263.142-1.406l.044-.24H7.078l-.045-.205c-.027-.107-.08-.623-.116-1.157l-.062-.952h8.02l.053-.606c.036-.329.089-.836.116-1.121c.035-.365.026-.507-.045-.463c-.053.027-1.949.027-4.228-.009l-4.138-.053l-.054-.632c-.035-.347-.08-.846-.107-1.104L6.42 5.65h11.16z"
+                    />
+                  </svg><span class="skill-name">CSS</span></div></div>
+      <div class="orbit orbit-two"><div class="skill skill-git"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M2.6 10.59L8.38 4.8l1.69 1.7c-.24.85.15 1.78.93 2.23v5.54c-.6.34-1 .99-1 1.73a2 2 0 0 0 2 2a2 2 0 0 0 2-2c0-.74-.4-1.39-1-1.73V9.41l2.07 2.09c-.07.15-.07.32-.07.5a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2c-.18 0-.35 0-.5.07L13.93 7.5a1.98 1.98 0 0 0-1.15-2.34c-.43-.16-.88-.2-1.28-.09L9.8 3.38l.79-.78c.78-.79 2.04-.79 2.82 0l7.99 7.99c.79.78.79 2.04 0 2.82l-7.99 7.99c-.78.79-2.04.79-2.82 0L2.6 13.41c-.79-.78-.79-2.04 0-2.82"
+                    />
+                  </svg><span class="skill-name">Git</span></div>
+<div class="skill skill-github"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"
+                    />
+                  </svg><span class="skill-name">GitHub</span></div></div>
+      <div class="orbit orbit-three"><div class="skill skill-javascript"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm7.334 13.055q1.08.87 2.156.858q.66 0 1.012-.242a.75.75 0 0 0 .341-.66a.97.97 0 0 0-.34-.748q-.352-.307-1.332-.616q-1.177-.34-1.815-.88q-.626-.54-.638-1.507q0-.913.792-1.529q.77-.616 1.97-.616q1.672 0 2.683.814l-.77 1.199a2.6 2.6 0 0 0-.935-.462a3.2 3.2 0 0 0-.946-.165q-.57 0-.913.209q-.34.21-.34.55q0 .374.417.638q.42.254 1.43.561q1.221.363 1.738.968t.517 1.54q0 .957-.737 1.65q-.726.682-2.112.715q-1.815 0-3.036-1.089zm-5.53.638q.352.22.847.22q.517 0 .858-.297q.34-.308.341-1.067v-5.302h1.485v5.588q-.033 1.298-.748 1.87a2.5 2.5 0 0 1-.891.484a3.3 3.3 0 0 1-.935.143q-.825 0-1.463-.286q-.682-.307-1.144-1.089l1.034-.847q.285.385.616.583"
+                    />
+                  </svg><span class="skill-name">JavaScript</span></div>
+<div class="skill skill-react"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 10.11c1.03 0 1.87.84 1.87 1.89c0 1-.84 1.85-1.87 1.85S10.13 13 10.13 12c0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7c-.52-.59-1.03-1.23-1.51-1.9a23 23 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86c.27.06.57.11.88.16zm6.54-.76l.81-1.5l-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9s-1.17 0-1.71.03c-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47c.54.03 1.11.03 1.71.03s1.17 0 1.71-.03c.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7c.52.59 1.03 1.23 1.51 1.9c.82.08 1.63.2 2.4.36c.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86c-.27-.06-.57-.11-.88-.16zm1.45-7.05c1.47.84 1.63 3.05 1.01 5.63c2.54.75 4.37 1.99 4.37 3.68s-1.83 2.93-4.37 3.68c.62 2.58.46 4.79-1.01 5.63c-1.46.84-3.45-.12-5.37-1.95c-1.92 1.83-3.91 2.79-5.38 1.95c-1.46-.84-1.62-3.05-1-5.63c-2.54-.75-4.37-1.99-4.37-3.68s1.83-2.93 4.37-3.68c-.62-2.58-.46-4.79 1-5.63c1.47-.84 3.46.12 5.38 1.95c1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26c2.1-.63 3.28-1.53 3.28-2.26s-1.18-1.63-3.28-2.26c-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26c-2.1.63-3.28 1.53-3.28 2.26s1.18 1.63 3.28 2.26c.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16c-.07-.28-.18-.57-.29-.86zm-2.89 4.04c1.59 1.5 2.97 2.08 3.59 1.7c.64-.35.83-1.82.32-3.96c-.77.16-1.58.28-2.4.36c-.48.67-.99 1.31-1.51 1.9M8.08 9.74l.3-.51c-.31.05-.61.1-.88.16c.07.28.18.57.29.86zm2.89-4.04C9.38 4.2 8 3.62 7.37 4c-.63.35-.82 1.82-.31 3.96a23 23 0 0 1 2.4-.36c.48-.67.99-1.31 1.51-1.9"
+                    />
+                  </svg><span class="skill-name">React</span></div></div>
+    </div>
+  </div></div>
+</section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-content">
+          <div class="contact-intro">
+            <span class="section-label">CONTACT</span>
+            <h2 id="contact-title">Let's build something <span>together.</span></h2>
+            <p>Have a project in mind or just want to say hello? Tell me a little about your idea. I'd love to hear from you.</p>
+            <a class="contact-email" href="mailto:sina0amiri1@gmail.com">sina0amiri1@gmail.com <span aria-hidden="true">&#8599;</span></a>
+            <div class="contact-socials">
+              <a href="https://github.com/Amiridp" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+              <a href="https://www.linkedin.com/in/amiridp" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/sina0amiri1@gmail.com" method="POST" aria-describedby="contact-note">
+            <input type="hidden" name="_subject" value="New portfolio enquiry" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" hidden />
+            <div class="contact-fields">
+              <div class="contact-field">
+                <label for="contact-name">Your name <span aria-hidden="true">*</span></label>
+                <input id="contact-name" name="name" autocomplete="name" placeholder="Sina" maxlength="100" required />
+              </div>
+              <div class="contact-field">
+                <label for="contact-email">Email address <span aria-hidden="true">*</span></label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="Amiri@example.com" maxlength="254" required />
+              </div>
+            </div>
+            <div class="contact-field">
+              <label for="contact-message">Your message <span aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" rows="6" placeholder="Tell me about your project..." minlength="10" maxlength="4000" required></textarea>
+            </div>
+            <p class="contact-note" id="contact-note">All fields are required. Your message is sent via FormSubmit to my email.</p>
+            <button class="btn btn-primary contact-submit" type="submit">Send message <span aria-hidden="true">&#8599;</span></button>
+            <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+            <noscript><p>Submitting this form will open FormSubmit to complete delivery.</p></noscript>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="#home" class="logo">SinaAmiri<span aria-hidden="true">.</span></a>
+            <p>Thoughtful interfaces.<br />Built with care, one detail at a time.</p>
+          </div>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <span class="footer-label">EXPLORE</span>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+          </nav>
+          <div class="footer-links">
+            <span class="footer-label">LET'S CONNECT</span>
+            <a href="mailto:sina0amiri1@gmail.com">sina0amiri1@gmail.com</a>
+            <a href="https://github.com/Amiridp" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+            <a href="https://www.linkedin.com/in/amiridp" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sina Amiri. All rights reserved.</p>
+          <a class="back-to-top" href="#home" aria-label="Back to top" title="Back to top" hidden><span aria-hidden="true">&#8593;</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

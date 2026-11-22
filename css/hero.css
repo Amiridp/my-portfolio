@@ -1,0 +1,105 @@
+.hero {
+  padding: 80px 0;
+}
+
+.hero .container {
+  @apply grid;
+  grid-template-columns: 1fr 1fr;
+  @apply items-center gap-[50px];
+}
+
+.hero-text h1 {
+  margin: 20px 0px;
+  font-size: clamp(2.5rem, 5vw, 3.125rem);
+  @apply leading-[1.15] font-bold text-text;
+}
+
+.badge::before {
+  content: "";
+  @apply inline-block w-[9px] h-[9px] bg-primary rounded-full mr-[5px];
+  animation: badge-blink 1.2s ease-in-out infinite;
+}
+
+.badge {
+  @apply text-[14px] font-bold tracking-[1px] text-primary;
+}
+
+.role {
+  @apply text-[25px] text-primary;
+}
+
+.hero-text p {
+  @apply max-w-[700px];
+  margin: 0 0 30px;
+  @apply text-[1.125rem] leading-[1.8] text-muted;
+}
+
+.hero-buttons {
+  @apply flex gap-[15px];
+}
+
+.hero-image {
+  @apply flex justify-center items-center;
+}
+
+.hero-image img {
+  width: min(22vw, 340px);
+  @apply aspect-square object-cover rounded-full;
+  border: 4px solid var(--primary);
+}
+@keyframes badge-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge::before {
+    animation: none;
+  }
+}
+.hero-text,
+.hero-image {
+  @apply min-w-0;
+}
+.hero-buttons {
+  @apply flex-wrap;
+}
+.hero-buttons .btn {
+  @apply min-h-[44px] inline-flex items-center justify-center text-center;
+}
+.hero-image img {
+  @apply block max-w-full;
+}
+@media (max-width: 1100px) {
+  .hero { padding: 64px 0; }
+  .hero .container {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    @apply gap-[32px];
+  }
+  .hero-image img { width: min(100%, 300px); }
+}
+@media (max-width: 760px) {
+  .hero { padding: 48px 0 56px; }
+  .hero .container {
+    grid-template-columns: minmax(0, 1fr);
+    @apply gap-[36px];
+  }
+  .hero-text { @apply max-w-[600px]; }
+  .hero-text h1 {
+    font-size: clamp(2.25rem, 7vw, 3rem);
+    @apply leading-[1.2];
+  }
+  .role { font-size: clamp(1.25rem, 4.5vw, 1.5625rem); }
+  .hero-text p { @apply text-[16px] leading-[1.8] mb-[24px]; }
+  .hero-image img { width: clamp(190px, 55vw, 280px); }
+}
+@media (max-width: 480px) {
+  .hero .container { width: calc(100% - 32px); }
+  .badge { @apply text-[11px] tracking-[.8px]; }
+  .hero-buttons { @apply gap-[12px]; }
+  .hero-buttons .btn { flex: 1 1 140px; @apply text-[14px]; }
+}
+@media (max-width: 360px) {
+  .hero-buttons { @apply flex-col; }
+  .hero-buttons .btn { @apply flex-auto w-full; }
+}.hero-image img { @apply h-auto; }

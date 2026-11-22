@@ -1,0 +1,99 @@
+.about {
+  padding: 120px 0;
+}
+
+.about-content {
+  @apply flex items-stretch gap-[70px];
+}
+
+.about-text {
+  @apply flex-1 max-w-[650px];
+}
+
+.about-text h2 {
+  @apply max-w-[600px];
+  margin: 0 0 30px;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  @apply leading-[1.15] font-bold text-text;
+}
+
+.about-text h2 span {
+  @apply text-primary;
+}
+
+.about-text p {
+  @apply max-w-[620px];
+  margin: 0 0 22px;
+  @apply text-[17px] leading-[1.8] text-muted;
+}
+
+.about-line {
+  @apply w-[1px] ml-auto shrink-0 bg-border;
+}
+
+.about-items {
+  @apply flex-1 max-w-[600px] ml-auto flex flex-col;
+}
+
+.about-item {
+  @apply flex items-start gap-[20px];
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-icon {
+  @apply w-[42px] h-[42px] shrink-0 flex items-start justify-center text-primary;
+}
+
+.about-icon svg {
+  @apply w-[34px] h-[34px] block;
+}
+
+.about-item h3 {
+  margin: 6px 0 8px;
+  @apply text-[18px] leading-[1.4] font-bold text-text;
+}
+
+.about-item p {
+  @apply max-w-[400px] m-[0] text-[15px] leading-[1.7] text-muted;
+}
+
+.about-item:last-child {
+  border-bottom: none;
+}
+.about-text,
+.about-items,
+.about-item > div:last-child {
+  @apply min-w-0;
+}
+@media (max-width: 1100px) {
+  .about { padding: 80px 0; }
+  .about-content { @apply gap-[32px]; }
+  .about-item { @apply gap-[14px]; }
+}
+@media (max-width: 900px) {
+  .about { padding: 64px 0; }
+  .about-content { @apply flex-col gap-[24px]; }
+  .about-line { @apply hidden; }
+  .about-text, .about-items { @apply max-w-none w-full ml-[0]; }
+  .about-text h2 { @apply mb-[24px]; }
+  .about-items {
+    @apply grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 28px;
+  }
+  .about-item { border-bottom: 0; }
+}
+@media (max-width: 600px) {
+  .about-items { grid-template-columns: minmax(0, 1fr); @apply gap-[0]; }
+  .about-item { padding: 20px 0; border-bottom: 1px solid var(--border-subtle); }
+  .about-item:last-child { border-bottom: 0; }
+  .about-text h2 { font-size: clamp(1.75rem, 6.5vw, 2rem); @apply leading-[1.25]; }
+  .about-text p { @apply text-[16px]; }
+  .about-icon { @apply w-[36px] h-[36px]; }
+  .about-icon svg { @apply w-[30px] h-[30px]; }
+  .about-item h3 { @apply mt-[3px]; }
+}
+@media (max-width: 480px) {
+  .about .container { width: calc(100% - 32px); }
+}

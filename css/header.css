@@ -1,0 +1,163 @@
+.site-header {
+  @apply sticky top-[0px] z-[1000];
+  border-bottom: 1px solid var(--border-subtle);
+  @apply bg-background;
+}
+
+.site-header .container {
+  @apply grid;
+  grid-template-columns: 1fr auto 1fr;
+  @apply items-center;
+  padding: 14px 0;
+}
+
+.logo {
+  @apply justify-self-start;
+  font-family: "Bricolage Grotesque", sans-serif;
+  @apply text-[1.125rem] font-bold text-text no-underline inline-block;
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+.logo:hover {
+  @apply text-primary;
+  transform: scale(1.1);
+}
+
+.main-nav ul {
+  @apply flex list-none gap-[30px] m-[0px] p-[0px];
+}
+
+.main-nav a {
+  @apply text-text text-[15px] no-underline relative pb-[8px];
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  @apply text-primary;
+}
+
+.main-nav a::after {
+  content: "";
+  @apply absolute left-1/2 bottom-[0] w-[0] h-[2px];
+  transform: translateX(-50%);
+  @apply bg-primary;
+  transition: width 0.5s ease;
+}
+
+.main-nav a:hover::after {
+  @apply w-full;
+}
+
+.header-actions {
+  @apply flex items-center gap-[80px] justify-self-end;
+}
+
+.header-socials {
+  @apply flex gap-[15px];
+}
+
+.header-socials a {
+  @apply inline-flex items-center justify-center text-text no-underline;
+}
+
+.header-socials svg {
+  @apply w-[25px] h-[25px] block;
+  fill: currentColor;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.header-socials a:hover {
+  @apply text-primary;
+}
+
+.header-socials a:hover svg {
+  transform: scale(1.2);
+}
+
+.theme-toggle {
+  @apply inline-flex items-center justify-center p-[0];
+  border: 0;
+  @apply bg-transparent text-text cursor-pointer;
+}
+
+.theme-toggle svg {
+  @apply w-[25px] h-[25px] block;
+  fill: currentColor;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+  transform: scale(1.2);
+}
+.theme-toggle {
+  @apply min-w-[44px] min-h-[44px];
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  @apply rounded-full;
+}
+.theme-toggle .theme-sun { @apply hidden; }
+[data-theme="dark"] .theme-toggle .theme-moon { @apply hidden; }
+[data-theme="dark"] .theme-toggle .theme-sun { @apply block; }
+.menu-toggle {
+  @apply hidden w-[44px] h-[44px] p-[10px];
+  border: 1px solid var(--border);
+  @apply rounded-[10px] bg-transparent text-text cursor-pointer;
+}
+.menu-toggle span {
+  @apply block w-[22px] h-[2px];
+  background: currentColor;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { @apply opacity-[0]; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.site-header :is(a, button):focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+@media (max-width: 1100px) {
+  .header-actions { @apply gap-[20px]; }
+  .main-nav ul { @apply gap-[20px]; }
+}
+@media (max-width: 900px) {
+  .site-header .container {
+    grid-template-columns: 1fr auto;
+    padding: 10px 0;
+    @apply relative;
+  }
+  .site-header .logo { grid-column: 1; grid-row: 1; }
+  .header-actions { grid-column: 2; grid-row: 1; @apply gap-[8px]; }
+  .header-socials { @apply hidden; }
+  .menu-toggle { order: 2; }
+  .nav-ready .menu-toggle { @apply flex flex-col justify-between; }
+  .main-nav {
+    grid-column: 1 / -1;
+    @apply mt-[12px];
+    border-top: 1px solid var(--border-subtle);
+  }
+  .main-nav[hidden] { @apply hidden; }
+  .main-nav ul { @apply flex-col gap-[4px]; padding: 12px 0; }
+  .main-nav a { @apply block; padding: 12px 16px; @apply rounded-[8px]; }
+  .main-nav a:hover { @apply bg-surface; }
+  .main-nav a::after { @apply hidden; }
+  .nav-ready .main-nav {
+    @apply absolute top-full left-[0] right-[0] mt-[0];
+    padding: 8px 12px;
+    max-height: calc(100dvh - 80px);
+    @apply overflow-y-auto bg-background;
+    border: 1px solid var(--border);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 16px 30px rgb(0 0 0 / 12%);
+  }
+}
+@media (max-width: 480px) {
+  .site-header .container { width: calc(100% - 32px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span { transition: none; }
+}

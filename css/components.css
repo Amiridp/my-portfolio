@@ -1,0 +1,33 @@
+.section-label {
+  @apply inline-block mb-[30px] text-[15px] font-bold tracking-[2px] text-primary;
+}
+
+.btn {
+  @apply inline-block;
+  padding: 12px 15px;
+  @apply rounded-[15px] text-[15px] font-semibold no-underline;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-primary {
+  @apply bg-primary text-on-primary;
+}
+
+.btn-primary:hover {
+  @apply bg-primary-dark;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  @apply bg-transparent text-text;
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  @apply border-primary text-primary;
+  transform: translateY(-2px);
+}

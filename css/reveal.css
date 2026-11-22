@@ -1,0 +1,28 @@
+/* Content remains visible without JavaScript. Only off-screen sections are armed. */
+.scroll-reveal {
+  transition: opacity 650ms ease, transform 650ms cubic-bezier(.2,.65,.3,1);
+}
+.scroll-reveal.is-pending {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.scroll-reveal:focus-within {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.is-pending {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+@media print {
+  .scroll-reveal,
+  .scroll-reveal.is-pending {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

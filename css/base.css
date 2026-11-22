@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../font/bricolage-grotesque-latin-wght-normal.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  @apply box-border m-[0];
+}
+
+::selection {
+  @apply bg-primary text-on-primary;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-background text-text;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+#about,
+#projects,
+#skills,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+.container {
+  width: min(1600px, calc(100% - 60px));
+  @apply mx-auto;
+}
+#home { scroll-margin-top: 100px; }
+@media (max-width: 480px) {
+  .container { width: calc(100% - 32px); }
+}
+@media (max-width: 900px) {
+  #home, #about, #projects, #skills, #contact { scroll-margin-top: 80px; }
+}

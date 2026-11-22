@@ -1,0 +1,23 @@
+{
+  "name": "sinaamiri.dev",
+  "version": "1.0.0",
+  "description": "Sina Amiri portfolio with modular Tailwind CSS styles.",
+  "scripts": {
+    "dev": "tailwindcss -i ./css/tailwind.css -o ./css/site.css --watch",
+    "build": "npm run build:css && node scripts/build-site.cjs",
+    "test:responsive": "node responsive-check.cjs",
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/site.css --minify",
+    "optimize:images": "node scripts/optimize-images.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "postcss": "^8.5.33",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5"
+  },
+  "private": true
+}

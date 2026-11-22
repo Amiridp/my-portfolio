@@ -1,0 +1,97 @@
+.contact {
+  padding: 100px 0;
+
+}
+.contact-content {
+  @apply grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  @apply items-start;
+  gap: clamp(32px, 6vw, 100px);
+}
+.contact-intro h2 {
+  @apply max-w-[520px] mb-[24px] text-text;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  @apply leading-[1.15];
+}
+.contact-intro h2 span { @apply text-primary; }
+.contact-intro > p {
+  @apply max-w-[460px] mb-[28px] text-muted text-[17px] leading-[1.8];
+}
+.contact-email {
+  @apply inline-block text-primary-dark font-semibold;
+  text-underline-offset: 5px;
+  overflow-wrap: anywhere;
+}
+.contact-socials { @apply flex gap-[24px] mt-[24px]; }
+.contact-socials a {
+  @apply py-[10px] text-muted no-underline;
+}
+.contact-socials a:hover { @apply text-primary-dark; }
+.contact-form {
+  @apply min-w-0;
+  padding: clamp(20px, 3vw, 40px);
+  border: 1px solid var(--border-subtle);
+  @apply rounded-[24px] bg-surface;
+  box-shadow: 0 12px 40px rgba(17, 24, 39, 0.04);
+}
+.contact-fields {
+  @apply grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  @apply gap-[20px];
+}
+.contact-field { @apply flex flex-col gap-[10px] mb-[24px]; }
+.contact-field label { @apply text-[14px] font-semibold; }
+.contact-field label span { @apply text-primary-dark; }
+.contact-field input,
+.contact-field textarea {
+  @apply w-full min-w-0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  @apply rounded-[12px] bg-background text-text;
+  font: inherit;
+  @apply leading-[1.5];
+}
+.contact-field textarea { @apply resize-y min-h-[160px]; }
+.contact-field input::placeholder,
+.contact-field textarea::placeholder { @apply text-placeholder; }
+.contact :is(input, textarea, button, a):focus-visible {
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 4px;
+}
+.contact-note, .contact-status {
+  @apply text-muted text-[13px] leading-[1.7];
+}
+.contact-submit {
+  @apply mt-[20px];
+  border: 0;
+  @apply bg-primary-dark;
+  font-family: inherit;
+  @apply cursor-pointer min-h-[48px];
+}
+.contact-submit span { @apply ml-[12px]; }
+.contact-submit:disabled { @apply opacity-[0.6] cursor-not-allowed; }
+.contact-status:not(:empty) { @apply mt-[16px]; }
+@media (max-width: 900px) {
+  .contact-content { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .contact { padding: 64px 0; }
+  .contact-fields { grid-template-columns: 1fr; @apply gap-[0]; }
+  .contact-submit { @apply w-full; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-submit { transition: none; }
+  .contact-submit:hover { transform: none; }
+}
+.contact-content > * { @apply min-w-0; }
+.contact-field input, .contact-field textarea { @apply text-[16px]; }
+.contact-socials { @apply flex-wrap; }
+.contact-socials a { @apply min-h-[44px] inline-flex items-center; }
+@media (min-width: 901px) and (max-width: 1100px) {
+  .contact-fields { grid-template-columns: minmax(0, 1fr); @apply gap-[0]; }
+}
+@media (max-width: 480px) {
+  .contact-form { padding: 20px 16px; @apply rounded-[18px]; }
+  .contact-intro h2 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  .contact-intro > p { @apply text-[16px]; }
+}

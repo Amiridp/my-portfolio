@@ -1,0 +1,91 @@
+.projects { padding: 90px 0 40px; @apply overflow-clip; }
+.projects-heading { @apply text-left; }
+.projects-heading h2 { font-size: clamp(2rem, 4vw, 2.75rem); @apply leading-[1.2] mb-[18px]; }
+.projects-heading h2 span { @apply text-primary; }
+.projects-heading p { @apply text-muted leading-[1.7]; }
+.project-deck { @apply relative max-w-[900px] h-[660px]; margin: 30px auto 0; }
+.project-card {
+  --offset: 0px;
+  --angle: 0deg;
+  @apply absolute top-[90px] left-1/2 w-[320px];
+  border: 1px solid var(--border);
+  @apply rounded-[22px] bg-surface text-text p-[20px];
+  box-shadow: 0 20px 45px rgb(0 0 0 / 16%);
+  transform: translateX(calc(-50% + var(--offset))) rotate(var(--angle));
+  transform-origin: 50% 100%;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.project-card:nth-child(1) { --offset: -200px; --angle: -12deg; @apply z-[1]; }
+.project-card:nth-child(2) { --offset: 0px; --angle: 0deg; @apply z-[2]; }
+.project-card:nth-child(3) { --offset: 200px; --angle: 12deg; @apply z-[3]; }
+.project-card:is(:hover, :focus-within, .is-active) {
+  @apply z-[5];
+  transform: translateX(calc(-50% + var(--offset))) translateY(-48px) rotate(0deg);
+  @apply border-primary;
+  box-shadow: 0 28px 60px rgb(0 0 0 / 25%);
+}
+.project-card-top { @apply flex justify-between items-center text-[12px] font-bold tracking-[1px] text-primary-dark mb-[16px]; }
+.project-card-top > :last-child { @apply text-[26px]; }
+.project-art { @apply relative h-[145px] rounded-[12px] bg-background; border: 1px solid var(--border-subtle); @apply overflow-hidden grid place-content-center gap-[8px] text-primary; }
+.project-art > span { @apply relative z-[1] text-[28px] font-bold; }
+.project-art i { @apply block h-[5px] w-[100px] rounded-[10px] bg-primary opacity-[.2]; }
+.project-art i:last-child { @apply w-[65px]; }
+.project-art-next i { @apply absolute w-[110px] h-[110px]; border: 1px solid var(--primary); @apply rounded-full bg-transparent right-[-20px] top-[-20px]; }
+.project-art-next i:last-child { @apply w-[150px] h-[150px]; }
+.project-art-lab { background: repeating-linear-gradient(0deg, transparent 0 23px, var(--border-subtle) 24px 25px), var(--background); }
+.project-category { @apply block; margin: 22px 0 10px; @apply text-[10px] tracking-[1.4px] text-primary-dark font-bold; }
+.project-card h3 { @apply text-[22px] mb-[12px]; }
+.project-card-body > p { @apply text-muted text-[14px] leading-[1.7] min-h-[48px]; }
+.project-tags { @apply flex flex-wrap gap-[6px]; margin: 18px 0; }
+.project-tags span { @apply text-[11px]; padding: 5px 8px; border: 1px solid var(--border); @apply rounded-[6px] text-muted; }
+.project-view { @apply w-full; border: 0; font-family: inherit; @apply cursor-pointer bg-primary-dark flex justify-between items-center; }
+.projects :is(button, article):focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; }
+.project-dialog { @apply m-auto; width: min(520px, calc(100% - 40px)); max-height: 85vh; padding: 40px 28px; border: 1px solid var(--border); @apply rounded-[22px] bg-surface text-text; }
+.project-dialog::backdrop { background: rgb(0 0 0 / 65%); }
+.project-dialog h3 { @apply text-[26px] mb-[18px]; }
+.project-dialog p { @apply leading-[1.8] text-muted; }
+.project-close { @apply absolute top-[8px] right-[10px] w-[40px] h-[40px] text-[28px]; border: 0; @apply rounded-full bg-transparent text-text cursor-pointer; }
+@media (max-width: 800px) {
+  .project-card:nth-child(1) { --offset: -120px; --angle: -8deg; }
+  .project-card:nth-child(3) { --offset: 120px; --angle: 8deg; }
+}
+@media (max-width: 600px) {
+  .projects { padding: 64px 0 20px; }
+  .project-deck { @apply h-auto grid gap-[24px] mt-[36px]; padding: 8px 0 24px; }
+  .project-card:nth-child(n) { @apply relative top-auto left-auto w-full max-w-[360px] mx-auto; transform: none; }
+  .project-card:is(:hover, :focus-within, .is-active) { transform: translateY(-6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card, .project-view { transition: none; }
+}
+.project-art-portfolio img { @apply block w-full h-full object-cover; object-position: left center; }
+.project-art-portfolio { @apply block; }
+.project-demo { @apply mt-[24px] bg-primary-dark; }
+.project-demo[hidden] { @apply hidden; }
+.project-view, .project-close { @apply min-h-[44px]; }
+.project-close { @apply w-[44px]; }
+.project-dialog { max-height: 85dvh; @apply overflow-y-auto; overflow-wrap: anywhere; }
+@media (max-width: 1000px), (hover: none) {
+  .project-deck {
+    @apply h-auto grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @apply gap-[24px] mt-[36px];
+    padding: 8px 0 32px;
+  }
+  .project-card:nth-child(n) {
+    @apply relative top-auto left-auto w-full max-w-[360px] mx-auto;
+    transform: none;
+    @apply flex flex-col;
+  }
+  .project-card-body { @apply flex flex-col flex-1; }
+  .project-view { margin-top: auto; }
+  .project-card:is(:hover, :focus-within, .is-active) { transform: translateY(-6px); }
+}
+@media (max-width: 640px) {
+  .project-deck { grid-template-columns: minmax(0, 1fr); }
+  .projects-heading h2 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  .project-dialog { padding: 48px 20px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card:is(:hover, :focus-within, .is-active) { transition: none; }
+}

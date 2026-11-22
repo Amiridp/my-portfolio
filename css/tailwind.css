@@ -1,0 +1,27 @@
+/* Modular Tailwind styles. Keep the existing reset to preserve browser defaults. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@import "./variables.css";
+@import "./base.css";
+@import "./components.css";
+@import "./header.css";
+@import "./hero.css";
+@import "./about.css";
+@import "./skills.css";
+@import "./contact.css";
+@import "./projects.css";
+@import "./footer.css";
+@import "./reveal.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-placeholder: var(--placeholder);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-on-primary: var(--on-primary);
+}
