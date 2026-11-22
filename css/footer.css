@@ -68,3 +68,18 @@
   @apply w-full h-full text-[24px];
   border: 0;
 }
+.footer-socials { @apply flex items-center gap-[12px] mt-[4px]; }
+.footer-socials a {
+  @apply inline-flex items-center justify-center w-[44px] h-[44px] p-[0] text-text;
+}
+.footer-socials svg {
+  @apply block w-[25px] h-[25px];
+  fill: currentColor;
+  transition: transform .2s ease;
+}
+.footer-socials a:hover { @apply text-primary; }
+.footer-socials a:hover svg { transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) {
+  .footer-socials svg { transition: none; }
+  .footer-socials a:hover svg { transform: none; }
+}

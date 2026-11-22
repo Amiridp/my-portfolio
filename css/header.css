@@ -54,30 +54,6 @@
   @apply flex items-center gap-[80px] justify-self-end;
 }
 
-.header-socials {
-  @apply flex gap-[15px];
-}
-
-.header-socials a {
-  @apply inline-flex items-center justify-center text-text no-underline;
-}
-
-.header-socials svg {
-  @apply w-[25px] h-[25px] block;
-  fill: currentColor;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
-}
-
-.header-socials a:hover {
-  @apply text-primary;
-}
-
-.header-socials a:hover svg {
-  transform: scale(1.2);
-}
-
 .theme-toggle {
   @apply inline-flex items-center justify-center p-[0];
   border: 0;
@@ -132,7 +108,6 @@
   }
   .site-header .logo { grid-column: 1; grid-row: 1; }
   .header-actions { grid-column: 2; grid-row: 1; @apply gap-[8px]; }
-  .header-socials { @apply hidden; }
   .menu-toggle { order: 2; }
   .nav-ready .menu-toggle { @apply flex flex-col justify-between; }
   .main-nav {
