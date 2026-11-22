@@ -9,7 +9,6 @@
   @apply gap-[40px] pb-[44px];
 }
 .footer-brand .logo { @apply text-[24px]; }
-.footer-brand .logo span { @apply text-primary; }
 .footer-brand p {
   @apply mt-[18px] text-muted text-[14px] leading-[1.8];
 }
