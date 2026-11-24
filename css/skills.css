@@ -49,6 +49,19 @@
   transform: translateX(-50%);
 }
 .skill:hover { @apply border-primary; }
+.skill-python, .skill-tailwind { top: calc(50% - 27px); }
+.skill-python { left: 100%; }
+.skill-tailwind { left: 0; }
+.skills-concepts {
+  @apply flex flex-wrap justify-center gap-[12px] m-[0] p-[0];
+  grid-column: 1 / -1;
+  list-style: none;
+}
+.skills-concepts li {
+  @apply rounded-full bg-surface text-muted text-[14px];
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+}
 .skill:hover svg { transform: scale(1.15); }
 .orbit-two .skill { animation-direction: reverse; }
 .skill-name {
