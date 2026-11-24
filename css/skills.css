@@ -44,14 +44,14 @@
   @apply top-[-27px] left-1/2;
   transform: translateX(-50%);
 }
-.skill-css, .skill-github, .skill-ai {
+.skill-css, .skill-github, .skill-tailwind {
   @apply bottom-[-27px] left-1/2;
   transform: translateX(-50%);
 }
 .skill:hover { @apply border-primary; }
-.skill-python, .skill-tailwind { top: calc(50% - 27px); }
+.skill-python, .skill-ai { top: calc(50% - 27px); }
 .skill-python { left: 100%; }
-.skill-tailwind { left: 0; }
+.skill-ai { left: 0; }
 .skill:hover svg { transform: scale(1.15); }
 .orbit-two .skill { animation-direction: reverse; }
 .skill-name {
