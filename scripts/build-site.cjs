@@ -12,7 +12,7 @@ fs.mkdirSync(path.dirname(dest),{recursive:true});
 fs.copyFileSync(path.join(root,file),dest);
 }
 let html=fs.readFileSync(path.join(root,"index.html"),"utf8");
-const host=process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? "https://"+process.env.VERCEL_PROJECT_PRODUCTION_URL : process.env.VERCEL_URL ? "https://"+process.env.VERCEL_URL : "");
+const host = process.env.SITE_URL || "https://sina-amiri.ir";
 if(host){
 const origin=new URL(host).origin;
 html=html.replaceAll('content="/images/social-preview.png"','content="'+origin+'/images/social-preview.png"');
