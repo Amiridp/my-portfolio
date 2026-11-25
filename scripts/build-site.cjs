@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,".."),out=path.join(root,"dist");
 fs.mkdirSync(out,{recursive:true});
 const assets=[
 "css/site.css","js/theme.js","js/navigation.js","js/contact.js","js/projects.js","js/back-to-top.js","js/reveal.js",
-"images/site-photo.webp","images/portfolio-preview.webp","images/social-preview.png",
+"images/site-photo.webp","images/portfolio-preview.webp","images/social-preview.webp","images/social-preview.png",
 "font/bricolage-grotesque-latin-wght-normal.woff2","MyResume(SinaAmiri).pdf"
 ];
 for(const file of assets){
